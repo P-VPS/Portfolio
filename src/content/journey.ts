@@ -10,7 +10,7 @@ export const journey: JourneyEntry[] = [
 		current: true,
 	},
 	{
-		period: "2025 → 2026",
+		period: "2025 → aujourd’hui",
 		kind: "Formation",
 		title: "Informatique de gestion",
 		place: "HEG",

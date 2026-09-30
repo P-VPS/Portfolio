@@ -30,7 +30,7 @@ defineProps<{ diagram: Diagram; compact?: boolean }>();
 				>
 					<span v-if="col.link.label" class="flow-link__label">{{ col.link.label }}</span>
 					<span class="flow-link__track">
-						<span class="flow-link__dot" />
+						<span v-if="col.link.direction !== 'none'" class="flow-link__dot" />
 					</span>
 				</div>
 			</template>

@@ -8,13 +8,7 @@ import { vReveal } from "@/composables/reveal";
 import SectionHead from "@/components/ui/SectionHead.vue";
 
 const refName = (code: string) =>
-	code === "SITE"
-		? "Ce site"
-		: code === "EXP"
-			? "Expériences"
-			: (projects.find((p) => p.code === code)?.name ?? code);
-
-const refLabel = (code: string) => (code === "SITE" ? "SITE" : code === "EXP" ? "EXP" : code);
+	code === "EXP" ? "Expériences" : (projects.find((p) => p.code === code)?.name ?? code);
 
 const enter = (id: LayerId) => (stack.hoverLayer = id);
 const leave = () => (stack.hoverLayer = null);
@@ -51,9 +45,7 @@ const leave = () => (stack.hoverLayer = null);
 					<li v-for="item in skills[layer.id]" :key="item.name" class="skill">
 						<span class="skill__name">{{ item.name }}</span>
 						<span class="skill__refs">
-							<abbr v-for="code in item.in" :key="code" :title="refName(code)">{{
-								refLabel(code)
-							}}</abbr>
+							<abbr v-for="code in item.in" :key="code" :title="refName(code)">{{ code }}</abbr>
 						</span>
 					</li>
 				</ul>

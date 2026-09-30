@@ -44,7 +44,7 @@ export interface DiagramColumn {
 	/** Frontière (pointillés) autour des nœuds de la colonne. */
 	group?: string;
 	/** Liaison vers la colonne suivante. */
-	link?: { label: string; direction: "right" | "left" | "both" };
+	link?: { label: string; direction: "right" | "left" | "both" | "none" };
 }
 
 export interface Diagram {
@@ -112,5 +112,5 @@ export interface JourneyEntry {
 export interface SkillItem {
 	name: string;
 	/** Codes des projets où la technologie ou la compétence a été utilisée. */
-	in: (ProjectCode | "SITE" | "EXP")[];
+	in: (ProjectCode | "EXP")[];
 }

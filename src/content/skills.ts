@@ -3,17 +3,16 @@ import type { LayerId, SkillItem } from "./types";
 /**
  * Compétences rangées par couche.
  * Chaque élément renvoie aux projets où il a réellement été utilisé
- * (SITE = ce portfolio, EXP = expériences visuelles).
+ * (EXP = expériences visuelles).
  */
 export const skills: Record<LayerId, SkillItem[]> = {
 	"05": [
 		{ name: "React Native · Expo", in: ["JAL"] },
-		{ name: "Vue.js", in: ["UST", "SITE"] },
+		{ name: "Vue.js", in: ["UST"] },
 		{ name: "Nuxt", in: ["UST"] },
 		{ name: "Interfaces d’administration", in: ["UST", "AGH"] },
 		{ name: "VBA · Excel", in: ["PLT"] },
-		{ name: "SVG · animation (GSAP)", in: ["SITE"] },
-		{ name: "Canvas 2D · CSS 3D", in: ["EXP"] },
+		{ name: "Canvas · CSS 3D · Web Audio", in: ["EXP"] },
 	],
 	"04": [
 		{ name: "NestJS", in: ["JAL", "UST"] },
@@ -34,7 +33,6 @@ export const skills: Record<LayerId, SkillItem[]> = {
 	"02": [
 		{ name: "Podman · pods", in: ["JAL"] },
 		{ name: "Conteneurs isolés", in: ["AGH"] },
-		{ name: "Docker", in: ["SITE"] },
 		{ name: "CI sur VPS", in: ["JAL"] },
 		{ name: "Réseau · switches · câblage", in: ["CIS"] },
 		{ name: "Configuration de postes", in: ["CIS"] },
@@ -47,4 +45,4 @@ export const skills: Record<LayerId, SkillItem[]> = {
 	],
 };
 
-export const languages = ["TypeScript", "JavaScript", "PHP", "VBA", "SQL", "SCSS"];
+export const languages = ["JavaScript", "PHP", "VBA", "SQL"];

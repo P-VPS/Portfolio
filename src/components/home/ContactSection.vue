@@ -23,10 +23,7 @@ import ButtonLink from "@/components/ui/ButtonLink.vue";
 				<ButtonLink :href="site.links.github" variant="outline" external>
 					GitHub <span class="btn__icon" aria-hidden="true">↗</span>
 				</ButtonLink>
-				<p class="contact__note t-mono-plain">
-					La plupart de mes projets récents sont dans des dépôts privés&#8239;: GitHub n’en montre
-					qu’une petite partie.
-				</p>
+				<p class="contact__note t-mono-plain">La plupart de mes projets récents sont privés.</p>
 			</div>
 		</div>
 	</section>

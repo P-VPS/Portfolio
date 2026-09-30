@@ -73,10 +73,10 @@ export const projects: Project[] = [
 						{ title: "PostgreSQL", sub: "données" },
 						{ title: "Redis", sub: "rate limiting" },
 					],
-					link: { label: "build · déploiement", direction: "left" },
+					link: { label: "", direction: "none" },
 				},
 				{
-					nodes: [{ title: "CI", sub: "VPS personnel" }],
+					nodes: [{ title: "Intégration continue", sub: "VPS personnel" }],
 				},
 			],
 			caption:
@@ -475,7 +475,7 @@ export const experiments: Experiment[] = [
 		slug: "dice",
 		name: "Dice",
 		text: "Un dé en 3D qu’on lance d’un geste : plus le swipe est fort, plus le dé roule, et le résultat reste aléatoire.",
-		tech: "CSS 3D (preserve-3d) · JavaScript, sans librairie",
+		tech: "3D en CSS uniquement · JavaScript vanilla",
 		href: "https://github.com/seb3x97/Dice",
 		media: {
 			kind: "video",
@@ -492,7 +492,7 @@ export const experiments: Experiment[] = [
 		slug: "audio-analyser",
 		name: "AudioAnalyser",
 		text: "Une visualisation musicale : le son est analysé en temps réel et une sphère de points réagit aux basses.",
-		tech: "Web Audio API · Canvas 2D · projection 3D écrite à la main",
+		tech: "Web Audio API · Canvas · visualisation qui réagit au son",
 		href: "https://github.com/seb3x97/AudioAnalyser",
 		media: {
 			kind: "video",
