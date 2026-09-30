@@ -45,4 +45,10 @@ export const skills: Record<LayerId, SkillItem[]> = {
 	],
 };
 
-export const languages = ["JavaScript", "PHP", "VBA", "SQL"];
+export const languages: SkillItem[] = [
+	{ name: "TypeScript", in: ["JAL", "AGH"] },
+	{ name: "JavaScript", in: ["EXP"] },
+	{ name: "PHP", in: ["PLT"] },
+	{ name: "VBA", in: ["PLT"] },
+	{ name: "SQL", in: ["JAL", "UST", "PLT"] },
+];

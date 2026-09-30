@@ -54,7 +54,10 @@ const leave = () => (stack.hoverLayer = null);
 
 		<p v-reveal class="langs t-mono-plain">
 			<span class="t-mono">Langages</span>
-			{{ languages.join(" · ") }}
+			<span v-for="lang in languages" :key="lang.name" class="lang">
+				{{ lang.name }}
+				<abbr v-for="code in lang.in" :key="code" :title="refName(code)">{{ code }}</abbr>
+			</span>
 		</p>
 	</section>
 </template>
@@ -152,8 +155,25 @@ const leave = () => (stack.hoverLayer = null);
 .langs {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 6px 16px;
+	align-items: center;
+	gap: 8px 20px;
 	margin-top: var(--space-6);
 	color: var(--ink);
+}
+
+.lang {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+
+	abbr {
+		padding: 2px 5px;
+		border-radius: 2px;
+		background: var(--surface);
+		font-size: 0.625rem;
+		color: var(--graphite);
+		text-decoration: none;
+		cursor: help;
+	}
 }
 </style>
