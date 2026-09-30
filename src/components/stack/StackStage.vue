@@ -239,13 +239,15 @@ const visible = computed(() => stack.mode === "case" || !!stack.anchor);
 	left: 0;
 	top: 0;
 	display: flex;
-	align-items: baseline;
-	gap: 10px;
+	flex-direction: column;
+	gap: 2px;
+	width: max-content;
+	max-width: 240px;
 	padding: 8px 12px;
 	background: var(--ink);
 	color: var(--surface);
 	border-radius: var(--radius);
-	white-space: nowrap;
+	line-height: 1.3;
 	translate: -50% -100%;
 
 	&__name {

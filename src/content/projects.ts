@@ -201,8 +201,8 @@ export const projects: Project[] = [
 	{
 		slug: "plte",
 		code: "PLT",
-		name: "Gestion de projet PLTE",
-		context: "Stage à la PL-MTI · projet pour la PLTE (EPFL)",
+		name: "Plateforme collaborative de gestion — PLTE",
+		context: "Stage à la PL-MTI · Projet pour la PLTE (EPFL)",
 		period: "2023–2024",
 		role: "Conception et développement : interface VBA, API Laravel, base MySQL",
 		status: "Utilisé par ≈ 5 personnes",
