@@ -10,7 +10,7 @@ export const journey: JourneyEntry[] = [
 		current: true,
 	},
 	{
-		period: "2025 → aujourd’hui",
+		period: "2025 → juin 2027",
 		kind: "Formation",
 		title: "Informatique de gestion",
 		place: "HEG",
@@ -33,18 +33,18 @@ export const journey: JourneyEntry[] = [
 		project: "cisbat-2025",
 	},
 	{
-		period: "Stage · ≈ 1 an",
-		kind: "Expérience",
-		title: "Stage en développement",
-		place: "PLTE · plateforme de l’EPFL",
-		text: "Système de gestion de projet : interface VBA, API Laravel, base MySQL.",
-		project: "plte",
-	},
-	{
 		period: "2023 → 2025",
 		kind: "Formation",
 		title: "Informatique de gestion",
 		place: "ES",
+	},
+	{
+		period: "2023 → 2024",
+		kind: "Expérience",
+		title: "Stage à la PL-MTI",
+		place: "Projet pour la PLTE (EPFL)",
+		text: "Système de gestion de projet pour la PLTE, client de la PL-MTI : interface VBA, API Laravel, base MySQL.",
+		project: "plte",
 	},
 	{
 		period: "2019 → 2023",

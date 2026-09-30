@@ -8,6 +8,7 @@ import type { LayerId, SkillItem } from "./types";
 export const skills: Record<LayerId, SkillItem[]> = {
 	"05": [
 		{ name: "React Native · Expo", in: ["JAL"] },
+		{ name: "React", in: ["AGH"] },
 		{ name: "Vue.js", in: ["UST"] },
 		{ name: "Nuxt", in: ["UST"] },
 		{ name: "Interfaces d’administration", in: ["UST", "AGH"] },
@@ -16,6 +17,7 @@ export const skills: Record<LayerId, SkillItem[]> = {
 	],
 	"04": [
 		{ name: "NestJS", in: ["JAL", "UST"] },
+		{ name: "Node.js", in: ["AGH"] },
 		{ name: "Laravel", in: ["PLT"] },
 		{ name: "Conception d’API", in: ["JAL", "UST", "PLT"] },
 		{ name: "Orchestration de tâches", in: ["AGH"] },
@@ -32,7 +34,7 @@ export const skills: Record<LayerId, SkillItem[]> = {
 	],
 	"02": [
 		{ name: "Podman · pods", in: ["JAL"] },
-		{ name: "Conteneurs isolés", in: ["AGH"] },
+		{ name: "Docker · conteneurs isolés", in: ["AGH"] },
 		{ name: "CI sur VPS", in: ["JAL"] },
 		{ name: "Réseau · switches · câblage", in: ["CIS"] },
 		{ name: "Configuration de postes", in: ["CIS"] },

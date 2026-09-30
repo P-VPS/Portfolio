@@ -202,8 +202,8 @@ export const projects: Project[] = [
 		slug: "plte",
 		code: "PLT",
 		name: "Gestion de projet PLTE",
-		context: "Stage · PLTE, plateforme de l’EPFL",
-		period: "≈ 1 an, en parallèle d’autres projets",
+		context: "Stage à la PL-MTI · projet pour la PLTE (EPFL)",
+		period: "2023–2024",
 		role: "Conception et développement : interface VBA, API Laravel, base MySQL",
 		status: "Utilisé par ≈ 5 personnes",
 		layers: ["05", "04", "03"],
@@ -211,7 +211,7 @@ export const projects: Project[] = [
 		title: "Un outil de gestion collaboratif, construit dans une stack imposée : VBA.",
 		summary:
 			"L’interface devait vivre dans un environnement VBA. J’ai construit autour un vrai système : API Laravel, base MySQL et travail à plusieurs sur les mêmes données.",
-		lead: "Pendant mon stage à la PLTE, une plateforme de l’EPFL, j’ai développé un système complet de gestion de projet. La contrainte : l’interface devait fonctionner dans un environnement VBA. Plutôt que de contourner cette contrainte, j’ai construit autour d’elle une vraie architecture, avec une API Laravel que j’ai développée, une base MySQL hébergée sur les serveurs de l’EPFL et une gestion de la collaboration entre utilisateurs.",
+		lead: "Pendant mon stage à la PL-MTI, j’ai développé un système complet de gestion de projet pour la PLTE, une plateforme de l’EPFL cliente de la PL-MTI, en parallèle d’autres projets. La contrainte : l’interface devait fonctionner dans un environnement VBA. Plutôt que de contourner cette contrainte, j’ai construit autour d’elle une vraie architecture, avec une API Laravel que j’ai développée, une base MySQL hébergée sur les serveurs de l’EPFL et une gestion de la collaboration entre utilisateurs.",
 		highlights: [
 			{
 				title: "Une contrainte assumée",
@@ -307,20 +307,20 @@ export const projects: Project[] = [
 			},
 		],
 		stack: {
-			"05": ["Interface web", "Vue bureau · Kanban"],
-			"04": ["Orchestration de tâches", "Abstraction des agents"],
+			"05": ["React", "Vue bureau · Kanban"],
+			"04": ["Node.js", "Orchestration de tâches", "Abstraction des agents"],
 			"03": ["Gestion multi-projets"],
-			"02": ["Conteneurs isolés", "Exécution contrôlée"],
+			"02": ["Docker", "Conteneurs isolés", "Exécution contrôlée"],
 		},
 		diagram: {
 			columns: [
 				{
-					nodes: [{ title: "Interface web", sub: "vue bureau · Kanban" }],
+					nodes: [{ title: "Interface web", sub: "React · vue bureau · Kanban" }],
 					link: { label: "tâche · résultat", direction: "both" },
 				},
 				{
 					nodes: [
-						{ title: "Orchestrateur", sub: "choix de l’environnement et des outils" },
+						{ title: "Orchestrateur", sub: "Node.js · choix de l’environnement et des outils" },
 						{ title: "Agents", sub: "abstraction commune" },
 					],
 					link: { label: "exécution isolée", direction: "both" },
@@ -328,8 +328,8 @@ export const projects: Project[] = [
 				{
 					group: "Environnements isolés",
 					nodes: [
-						{ title: "Projet A", sub: "conteneur" },
-						{ title: "Projet B", sub: "conteneur" },
+						{ title: "Projet A", sub: "conteneur Docker" },
+						{ title: "Projet B", sub: "conteneur Docker" },
 					],
 				},
 			],
