@@ -1,0 +1,34 @@
+@use "sass:map";
+
+// Breakpoints — pensés pour le contenu, pas pour des appareils précis.
+// sm : grand téléphone / petite tablette · md : tablette · lg : rail visible · xl : grand écran
+$breakpoints: (
+	sm: 600px,
+	md: 900px,
+	lg: 1100px,
+	xl: 1440px,
+);
+
+@mixin up($bp) {
+	@media (min-width: map.get($breakpoints, $bp)) {
+		@content;
+	}
+}
+
+@mixin down($bp) {
+	@media (max-width: (map.get($breakpoints, $bp) - 0.02px)) {
+		@content;
+	}
+}
+
+@mixin hover {
+	@media (hover: hover) and (pointer: fine) {
+		@content;
+	}
+}
+
+@mixin reduced-motion {
+	@media (prefers-reduced-motion: reduce) {
+		@content;
+	}
+}

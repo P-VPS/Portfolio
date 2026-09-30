@@ -1,0 +1,17 @@
+// Conteneur et grille partagés par toutes les sections
+.container {
+	width: 100%;
+	max-width: calc(var(--container) + 2 * var(--margin));
+	margin-inline: auto;
+	padding-inline: var(--margin);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+	column-gap: var(--gutter);
+}
+
+.section {
+	padding-block: calc(var(--section-gap) / 2);
+}

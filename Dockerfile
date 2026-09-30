@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer les dépendances
-RUN npm install
+RUN npm ci
 
 # Copier le reste des fichiers
 COPY . .
@@ -30,4 +30,5 @@ COPY --from=builder /app/dist ./dist
 EXPOSE 4000
 
 # Lancer le serveur sur le port défini
-CMD ["serve", "dist", "-l", "4000"]
+# -s : renvoie index.html pour les routes de la SPA (/projets/...)
+CMD ["serve", "-s", "dist", "-l", "4000"]

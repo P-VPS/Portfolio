@@ -1,0 +1,51 @@
+@use "mq" as *;
+
+// Révélations d'entrée (déclenchées par la directive v-reveal)
+[data-reveal] {
+	opacity: 0;
+	transform: translate3d(0, 14px, 0);
+	transition:
+		opacity var(--dur) var(--ease),
+		transform var(--dur) var(--ease);
+	transition-delay: calc(var(--reveal-i, 0) * 70ms);
+
+	&.is-revealed {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+// Figures : ouverture depuis les repères d'angle
+[data-reveal="figure"] {
+	transform: none;
+	clip-path: inset(6% 6% 6% 6% round var(--radius));
+	transition:
+		opacity var(--dur) var(--ease),
+		clip-path var(--dur-slow) var(--ease);
+
+	&.is-revealed {
+		clip-path: inset(0 0 0 0 round 0);
+	}
+}
+
+@include reduced-motion {
+	[data-reveal],
+	[data-reveal="figure"] {
+		opacity: 1;
+		transform: none;
+		clip-path: none;
+		transition: none;
+	}
+}
+
+// Transitions de page (View Transitions API)
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 420ms;
+	animation-timing-function: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+::view-transition-group(*) {
+	animation-duration: 520ms;
+	animation-timing-function: cubic-bezier(0.2, 0.7, 0.1, 1);
+}

@@ -1,22 +1,11 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
-import { MotionPlugin } from "@vueuse/motion";
-import gsap from "gsap";
 
-import App from "@/components/App.vue";
-import router from "./router";
+import "@fontsource-variable/instrument-sans";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@/styles/main.scss";
 
-import "@/assets/scss/style.scss";
+import App from "@/App.vue";
+import router from "@/router";
 
-const app = createApp(App);
-
-//Animation
-app.use(MotionPlugin);
-app.use(gsap);
-
-//Pinia
-app.use(createPinia());
-
-//Router
-app.use(router);
-app.mount("#app");
+createApp(App).use(router).mount("#app");

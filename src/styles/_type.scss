@@ -1,0 +1,85 @@
+@use "mq" as *;
+
+.t-display {
+	font-size: var(--fs-display);
+	line-height: 1.02;
+	letter-spacing: -0.035em;
+	font-weight: 500;
+}
+
+.t-h2 {
+	font-size: var(--fs-h2);
+	line-height: 1.04;
+	letter-spacing: -0.03em;
+	font-weight: 500;
+}
+
+.t-h3 {
+	font-size: var(--fs-h3);
+	line-height: 1.12;
+	letter-spacing: -0.02em;
+	font-weight: 500;
+}
+
+.t-lead {
+	font-size: var(--fs-lead);
+	line-height: 1.5;
+	color: var(--graphite);
+}
+
+.t-mono {
+	font-family: var(--font-mono);
+	font-size: var(--fs-mono);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--graphite);
+	line-height: 1.5;
+}
+
+.t-mono-plain {
+	font-family: var(--font-mono);
+	font-size: var(--fs-mono);
+	color: var(--graphite);
+	line-height: 1.6;
+}
+
+.t-signal {
+	color: var(--signal-text);
+}
+
+// Lien texte : le souligné vermillon se trace au survol
+.link {
+	color: var(--ink);
+	text-decoration: none;
+	background-image: linear-gradient(var(--signal), var(--signal));
+	background-size: 100% 1.5px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	padding-bottom: 3px;
+	transition: background-size var(--dur) var(--ease);
+
+	@include hover {
+		&:hover {
+			animation: link-draw var(--dur) var(--ease);
+		}
+	}
+}
+
+@keyframes link-draw {
+	0% {
+		background-size: 100% 1.5px;
+		background-position: 100% 100%;
+	}
+	49% {
+		background-size: 0 1.5px;
+		background-position: 100% 100%;
+	}
+	50% {
+		background-size: 0 1.5px;
+		background-position: 0 100%;
+	}
+	100% {
+		background-size: 100% 1.5px;
+		background-position: 0 100%;
+	}
+}

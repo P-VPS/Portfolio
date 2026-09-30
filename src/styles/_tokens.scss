@@ -1,0 +1,85 @@
+@use "mq" as *;
+
+:root {
+	// Couleurs
+	--paper: #f2f0ea;
+	--surface: #faf9f5;
+	--line: #d6d2c8;
+	--line-soft: #e4e0d7;
+	--graphite: #5e5d59;
+	--faint: #9a968d;
+	--ink: #16181b;
+	--signal: #e0461e;
+	--signal-text: #b3340f;
+	--signal-soft: rgba(224, 70, 30, 0.1);
+
+	// Couches de la coupe (plaques)
+	--plate-top: var(--surface);
+	--plate-side: #e7e3da;
+	--plate-off-top: #efece5;
+	--plate-off-side: #e6e2da;
+	--plate-off-stroke: #c3beb2;
+
+	// Typographie
+	--font-sans:
+		"Instrument Sans Variable", "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+	--font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+	--fs-display: clamp(2.5rem, 1.5rem + 3.2vw, 4.25rem);
+	--fs-h2: clamp(2rem, 1.35rem + 2.2vw, 3.5rem);
+	--fs-h3: clamp(1.5rem, 1.15rem + 1.1vw, 2.25rem);
+	--fs-lead: clamp(1.125rem, 1.02rem + 0.35vw, 1.3125rem);
+	--fs-body: clamp(1rem, 0.97rem + 0.12vw, 1.0625rem);
+	--fs-small: 0.875rem;
+	--fs-mono: 0.75rem;
+
+	// Espacements
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.5rem;
+	--space-6: 2rem;
+	--space-7: 3rem;
+	--space-8: 4rem;
+	--space-9: clamp(4rem, 2.5rem + 5vw, 7.5rem);
+	--section-gap: clamp(6rem, 3.5rem + 8vw, 11rem);
+
+	// Grille
+	--gutter: 16px;
+	--margin: 20px;
+	--container: 1280px;
+	--columns: 4;
+
+	// Formes
+	--radius: 4px;
+	--header-h: 64px;
+
+	// Mouvement
+	--ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+	--dur-fast: 180ms;
+	--dur: 600ms;
+	--dur-slow: 1000ms;
+
+	@include up(sm) {
+		--margin: 32px;
+		--columns: 8;
+		--gutter: 20px;
+	}
+
+	@include up(md) {
+		--margin: 48px;
+		--header-h: 72px;
+	}
+
+	@include up(lg) {
+		// Laisse la place au rail dans la marge gauche
+		--margin: 112px;
+		--columns: 12;
+		--gutter: 24px;
+	}
+
+	@include up(xl) {
+		--margin: 128px;
+	}
+}
