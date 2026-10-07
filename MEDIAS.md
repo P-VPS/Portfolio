@@ -66,7 +66,7 @@ Le build le détecte automatiquement et remplace le placeholder hachuré.
 | `equipe` | photo 3:2 | L'équipe en action — **avec l'accord des personnes visibles**. |
 | `boucle` | vidéo 16:9 | Boucle de 5 à 10 s, sans son : une salle pendant une session ou la régie en fonctionnement. |
 
-### Expériences — `experiences/` (ratio 16:10, 1600 × 1000 ; affichées en entier, sans recadrage)
+### Expériences — `experiences/` (ratio 4:3, 1200 × 900 ; affichées en entier, fond blanc fondu dans le cadre)
 
 | Fichier | Contenu attendu |
 |---|---|

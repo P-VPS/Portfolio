@@ -38,7 +38,7 @@ const autoplay = !prefersReducedMotion();
 	<figure class="media" :class="[`media--${media.kind}`, { 'media--compact': compact }]">
 		<div
 			class="media__frame"
-			:class="resolved && `media__frame--${fit}`"
+			:class="resolved && [`media__frame--${fit}`, { 'media__frame--blend': media.blend }]"
 			:style="{ aspectRatio: media.ratio }"
 			:data-media-file="media.file"
 		>
@@ -140,6 +140,16 @@ const autoplay = !prefersReducedMotion();
 		box-shadow: none;
 		// Liseré et ombre qui suivent l'image réelle, pas la boîte
 		filter: drop-shadow(0 0 0.5px rgba(22, 24, 27, 0.35)) drop-shadow(0 6px 14px rgba(22, 24, 27, 0.07));
+	}
+}
+
+// Fond blanc de l'image fondu dans la surface : l'objet flotte, sans liseré
+.media__frame--blend {
+	--mat: clamp(12px, 7cqw, 40px);
+
+	.media__asset {
+		mix-blend-mode: multiply;
+		filter: none;
 	}
 }
 

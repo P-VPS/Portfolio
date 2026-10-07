@@ -476,15 +476,16 @@ export const experiments: Experiment[] = [
 		demo: "https://manager.sebastien-voide.ch/?src=https://github.com/seb3x97/Dice/blob/main/index.html",
 		media: {
 			kind: "video",
-			// Capture d’interface : affichée en entier, sans recadrage
+			// Objet détouré sur fond blanc : affiché en entier, fondu dans le cadre
 			fit: "contain",
-			ratio: "16 / 10",
+			blend: true,
+			ratio: "4 / 3",
 			file: "experiences/dice",
 			alt: "Le dé 3D de Dice en train de rouler",
 			caption: "Dice",
 			brief: "Boucle courte (3 à 6 s, sans son) du dé qui roule après un swipe. Une capture fixe (PNG) est aussi acceptée.",
 			format: "MP4 / WebM sans audio, ou PNG / WebP",
-			size: "1600 × 1000",
+			size: "1200 × 900",
 		},
 	},
 	{
@@ -497,13 +498,14 @@ export const experiments: Experiment[] = [
 		media: {
 			kind: "video",
 			fit: "contain",
-			ratio: "16 / 10",
+			blend: true,
+			ratio: "4 / 3",
 			file: "experiences/audio-analyser",
 			alt: "La sphère d’AudioAnalyser qui réagit à la musique",
 			caption: "AudioAnalyser",
 			brief: "Boucle courte (3 à 6 s, sans son) de la sphère qui pulse sur les basses. Une capture fixe est aussi acceptée.",
 			format: "MP4 / WebM sans audio, ou PNG / WebP",
-			size: "1600 × 1000",
+			size: "1200 × 900",
 		},
 	},
 ];

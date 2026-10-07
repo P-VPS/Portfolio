@@ -39,6 +39,8 @@ export interface MediaSpec {
 	fit?: "cover" | "contain";
 	/** Point focal en mode cover (object-position CSS), ex. « 50% 30% ». */
 	position?: string;
+	/** Objet détouré sur fond blanc : le fond se fond dans le cadre, avec plus de marge (mode contain). */
+	blend?: boolean;
 }
 
 export interface DiagramNode {
