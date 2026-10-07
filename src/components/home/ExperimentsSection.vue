@@ -19,9 +19,10 @@ import MediaFrame from "@/components/ui/MediaFrame.vue";
 					<h3 class="exp__name">{{ exp.name }}</h3>
 					<p class="exp__text">{{ exp.text }}</p>
 					<p class="t-mono-plain">{{ exp.tech }}</p>
-					<a :href="exp.href" class="link exp__link" target="_blank" rel="noopener noreferrer"
-						>Voir le code ↗</a
-					>
+					<p class="exp__links">
+						<a :href="exp.demo" class="link" target="_blank" rel="noopener noreferrer">Voir la démo ↗</a>
+						<a :href="exp.href" class="link" target="_blank" rel="noopener noreferrer">Voir le code ↗</a>
+					</p>
 				</div>
 			</li>
 		</ul>
@@ -53,10 +54,6 @@ import MediaFrame from "@/components/ui/MediaFrame.vue";
 	padding-top: var(--space-5);
 	border-top: 1px solid var(--ink);
 
-	@include up(sm) {
-		grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-		column-gap: var(--space-5);
-	}
 
 	&__body {
 		display: flex;
@@ -74,8 +71,10 @@ import MediaFrame from "@/components/ui/MediaFrame.vue";
 		color: var(--graphite);
 	}
 
-	&__link {
-		align-self: flex-start;
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2) var(--space-5);
 		margin-top: var(--space-2);
 	}
 }

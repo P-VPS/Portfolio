@@ -2,7 +2,7 @@ import type { MediaSpec } from "@/content/types";
 
 // Tous les médias déposés dans src/assets/media sont détectés au build.
 // Un média manquant affiche automatiquement un placeholder documenté.
-const files = import.meta.glob<string>("../assets/media/**/*.{webp,avif,jpg,jpeg,png,mp4,webm}", {
+const files = import.meta.glob<string>("../assets/media/**/*.{webp,avif,jpg,jpeg,png,gif,mp4,webm}", {
 	eager: true,
 	query: "?url",
 	import: "default",

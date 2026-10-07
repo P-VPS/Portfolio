@@ -104,7 +104,10 @@ export interface Experiment {
 	name: string;
 	text: string;
 	tech: string;
+	/** Code source. */
 	href: string;
+	/** Démo en ligne. */
+	demo: string;
 	media: MediaSpec;
 }
 

@@ -4,7 +4,7 @@ Tous les visuels des projets vivent dans `src/assets/media/`.
 **Aucune ligne de code à modifier** : déposez simplement le fichier au bon chemin, avec le bon nom.
 Le build le détecte automatiquement et remplace le placeholder hachuré.
 
-- Extensions acceptées : `.webp`, `.avif`, `.jpg`, `.jpeg`, `.png` (images) · `.mp4`, `.webm` (vidéos).
+- Extensions acceptées : `.webp`, `.avif`, `.jpg`, `.jpeg`, `.png`, `.gif` (images) · `.mp4`, `.webm` (vidéos).
 - Si plusieurs formats existent pour le même nom, le plus léger (`avif` / `webp` / `webm`) est utilisé.
 - Les légendes, textes alternatifs et ratios sont définis dans `src/content/projects.ts` (champ `media`).
 - Conseil : exporter en WebP qualité 80–85.
@@ -66,7 +66,7 @@ Le build le détecte automatiquement et remplace le placeholder hachuré.
 | `equipe` | photo 3:2 | L'équipe en action — **avec l'accord des personnes visibles**. |
 | `boucle` | vidéo 16:9 | Boucle de 5 à 10 s, sans son : une salle pendant une session ou la régie en fonctionnement. |
 
-### Expériences — `experiences/` (ratio 4:3, 1200 × 900)
+### Expériences — `experiences/` (ratio 16:10, 1600 × 1000 ; affichées en entier, sans recadrage)
 
 | Fichier | Contenu attendu |
 |---|---|
