@@ -7,7 +7,9 @@ Le build le détecte automatiquement et remplace le placeholder hachuré.
 - Extensions acceptées : `.webp`, `.avif`, `.jpg`, `.jpeg`, `.png` (images) · `.mp4`, `.webm` (vidéos).
 - Si plusieurs formats existent pour le même nom, le plus léger (`avif` / `webp` / `webm`) est utilisé.
 - Les légendes, textes alternatifs et ratios sont définis dans `src/content/projects.ts` (champ `media`).
-- Conseil : exporter en WebP qualité 80–85. Les images sont affichées en `object-fit: cover` dans le ratio indiqué : respecter le ratio évite tout recadrage.
+- Conseil : exporter en WebP qualité 80–85.
+- Cadrage : les **captures** (desktop, mobile) sont affichées en entier (`contain`) sur un fond neutre ; les **photos et vidéos** remplissent le cadre (`cover`). Respecter le ratio évite toute marge ou tout recadrage.
+- Pour changer le cadrage d'un média, dans `src/content/projects.ts` : `fit: "cover" | "contain"`, `position: "50% 30%"` (point focal en mode cover) ou `ratio` (si le fichier n'a pas le ratio de référence).
 
 ## Formats de référence
 

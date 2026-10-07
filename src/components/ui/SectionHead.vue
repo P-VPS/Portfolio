@@ -36,7 +36,7 @@ defineProps<{ kicker: string; title: string; id?: string }>();
 }
 
 .section-head__aside {
-	max-width: 44ch;
+	max-width: 36ch;
 
 	@include up(md) {
 		justify-self: end;

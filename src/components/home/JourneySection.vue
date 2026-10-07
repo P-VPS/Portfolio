@@ -10,10 +10,7 @@ import SectionHead from "@/components/ui/SectionHead.vue";
 			id="parcours-titre"
 			kicker="Parcours"
 			title="Du CFC à la HEG, avec du terrain entre les deux."
-		>
-			Une formation continue en informatique, et des expériences réelles en parallèle&#8239;: un stage,
-			un événement, des clients.
-		</SectionHead>
+		/>
 
 		<ol class="timeline">
 			<li

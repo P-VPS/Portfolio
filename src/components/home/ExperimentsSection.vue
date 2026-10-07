@@ -9,7 +9,7 @@ import MediaFrame from "@/components/ui/MediaFrame.vue";
 		<div class="head">
 			<p v-reveal class="t-mono t-signal">À côté</p>
 			<h2 id="experiences-titre" v-reveal:1 class="t-h3">
-				Deux expériences plus visuelles, sans librairie 3D.
+				Deux expériences visuelles, sans librairie 3D.
 			</h2>
 		</div>
 		<ul class="list">

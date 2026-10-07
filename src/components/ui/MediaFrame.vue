@@ -27,16 +27,26 @@ const kindLabel = computed(
 			video: "Vidéo",
 		})[props.media.kind],
 );
+// Captures d'interface : on montre tout l'écran. Photos et vidéos : on remplit le cadre.
+const fit = computed(
+	() => props.media.fit ?? (props.media.kind === "photo" || props.media.kind === "video" ? "cover" : "contain"),
+);
 const autoplay = !prefersReducedMotion();
 </script>
 
 <template>
 	<figure class="media" :class="[`media--${media.kind}`, { 'media--compact': compact }]">
-		<div class="media__frame" :style="{ aspectRatio: media.ratio }" :data-media-file="media.file">
+		<div
+			class="media__frame"
+			:class="resolved && `media__frame--${fit}`"
+			:style="{ aspectRatio: media.ratio }"
+			:data-media-file="media.file"
+		>
 			<template v-if="resolved">
 				<video
 					v-if="resolved.isVideo"
 					class="media__asset"
+					:style="media.position && { objectPosition: media.position }"
 					:src="resolved.url"
 					:autoplay="autoplay"
 					:controls="!autoplay"
@@ -49,6 +59,7 @@ const autoplay = !prefersReducedMotion();
 				<img
 					v-else
 					class="media__asset"
+					:style="media.position && { objectPosition: media.position }"
 					:src="resolved.url"
 					:alt="media.alt"
 					:loading="eager ? 'eager' : 'lazy'"
@@ -100,11 +111,36 @@ const autoplay = !prefersReducedMotion();
 }
 
 .media__asset {
+	// En absolu : le cadre garde toujours son ratio, quelle que soit la taille du fichier
+	position: absolute;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: inherit;
 	box-shadow: 0 0 0 1px rgba(22, 24, 27, 0.08);
+}
+
+// Capture entière posée sur une surface neutre (passe-partout), sans recadrage
+.media__frame--contain {
+	--mat: clamp(6px, 2.5cqw, 20px);
+	container-type: inline-size;
+	border: 1px solid var(--line-soft);
+
+	.media--mobile & {
+		--mat: clamp(6px, 5cqw, 16px);
+	}
+
+	.media__asset {
+		inset: var(--mat);
+		width: calc(100% - 2 * var(--mat));
+		height: calc(100% - 2 * var(--mat));
+		object-fit: contain;
+		border-radius: 0;
+		box-shadow: none;
+		// Liseré et ombre qui suivent l'image réelle, pas la boîte
+		filter: drop-shadow(0 0 0.5px rgba(22, 24, 27, 0.35)) drop-shadow(0 6px 14px rgba(22, 24, 27, 0.07));
+	}
 }
 
 .media__caption {

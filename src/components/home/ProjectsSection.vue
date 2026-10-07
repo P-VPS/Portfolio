@@ -40,9 +40,7 @@ onBeforeUnmount(() => {
 			kicker="Projets · 5 études de cas"
 			title="Cinq projets, de l’écran jusqu’au terrain."
 		>
-			Une app mobile hors ligne, un back-office pour un club, un outil métier en VBA, une plateforme
-			d’orchestration et la régie d’une conférence : chaque projet traverse la pile à un endroit
-			différent.
+			Chaque projet traverse la pile à un endroit différent.
 		</SectionHead>
 
 		<div ref="list" class="projects">

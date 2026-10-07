@@ -32,6 +32,13 @@ export interface MediaSpec {
 	size: string;
 	/** Zone à garder libre pour le recadrage responsive, si nécessaire. */
 	crop?: string;
+	/**
+	 * Cadrage du fichier dans le ratio : « contain » montre l'image entière sur un fond neutre,
+	 * « cover » remplit le cadre en recadrant. Par défaut : contain pour les captures, cover pour photos et vidéos.
+	 */
+	fit?: "cover" | "contain";
+	/** Point focal en mode cover (object-position CSS), ex. « 50% 30% ». */
+	position?: string;
 }
 
 export interface DiagramNode {
@@ -81,6 +88,8 @@ export interface Project {
 	highlights: Highlight[];
 	facts?: { value: string; label: string }[];
 	stack: Partial<Record<LayerId, string[]>>;
+	/** Quelques technologies clés, affichées sur l'accueil. */
+	tech: string[];
 	diagram?: Diagram;
 	story?: { kicker: string; title: string; paragraphs: string[] };
 	/** Ce que le projet montre sur le profil. */

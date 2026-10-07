@@ -6,7 +6,6 @@ import { vReveal } from "@/composables/reveal";
 import MediaFrame from "@/components/ui/MediaFrame.vue";
 import LayerChips from "@/components/ui/LayerChips.vue";
 import ArchitectureDiagram from "@/components/project/ArchitectureDiagram.vue";
-import StackList from "@/components/project/StackList.vue";
 
 const props = defineProps<{ project: Project; index: number }>();
 
@@ -107,7 +106,9 @@ const flipped = computed(() => props.index % 2 === 1);
 		</ol>
 
 		<footer v-reveal class="project__foot">
-			<StackList :stack="project.stack" inline />
+			<ul class="tech" aria-label="Technologies clés">
+				<li v-for="t in project.tech" :key="t">{{ t }}</li>
+			</ul>
 			<div class="project__links">
 				<a
 					v-if="project.url"
@@ -194,7 +195,7 @@ const flipped = computed(() => props.index % 2 === 1);
 
 .project__summary {
 	color: var(--graphite);
-	max-width: 46ch;
+	max-width: 40ch;
 }
 
 .meta {
@@ -329,6 +330,23 @@ const flipped = computed(() => props.index % 2 === 1);
 		font-size: 0.9375rem;
 		line-height: 1.5;
 		color: var(--graphite);
+		max-width: 34ch;
+	}
+}
+
+.tech {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+
+	li {
+		padding: 4px 9px;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--surface);
+		font-family: var(--font-mono);
+		font-size: 0.75rem;
+		color: var(--ink);
 	}
 }
 

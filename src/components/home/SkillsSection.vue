@@ -21,15 +21,15 @@ const leave = () => (stack.hoverLayer = null);
 			kicker="Compétences"
 			title="Couche par couche, avec le projet qui le prouve."
 		>
-			Pas de pourcentages&#8239;: chaque technologie renvoie aux projets où je l’ai réellement utilisée.
+			Chaque technologie renvoie aux projets où je l’ai utilisée.
 		</SectionHead>
 
 		<div class="layers">
 			<section
-				v-for="layer in layers"
+				v-for="(layer, i) in layers"
 				:id="`couche-${layer.id}`"
 				:key="layer.id"
-				v-reveal
+				v-reveal:[i]
 				class="layer"
 				:class="{ 'is-hover': stack.hoverLayer === layer.id }"
 				:aria-labelledby="`couche-${layer.id}-titre`"
@@ -74,7 +74,15 @@ const leave = () => (stack.hoverLayer = null);
 	padding-block: var(--space-5);
 	border-top: 1px solid var(--line);
 	scroll-margin-top: calc(var(--header-h) + 40px);
-	transition: border-color var(--dur-fast) var(--ease);
+	// Reprend la révélation de v-reveal (sinon écrasée par ce transition) en ajoutant le survol
+	transition:
+		opacity var(--dur) var(--ease) calc(var(--reveal-i, 0) * 80ms),
+		transform var(--dur) var(--ease) calc(var(--reveal-i, 0) * 80ms),
+		border-color var(--dur-fast) var(--ease);
+
+	@include reduced-motion {
+		transition: none;
+	}
 
 	&:last-child {
 		border-bottom: 1px solid var(--line);

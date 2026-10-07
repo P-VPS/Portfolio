@@ -28,30 +28,29 @@ export const projects: Project[] = [
 		name: "Jalona",
 		context: "Projet personnel · produit",
 		period: "Depuis janvier 2026",
-		role: "Conception et développement, seul, de l’app à l’infrastructure",
+		role: "Seul, de l’app à l’infrastructure",
 		status: "En développement · publication sur les stores prévue",
 		layers: ["05", "04", "03", "02"],
 		coreOffset: -45,
 		title: "Une app de planification très configurable, construite seul de bout en bout.",
-		summary:
-			"Jalona s’adresse aux personnes qui veulent un contrôle précis sur leur organisation. Je la développe seul, de l’application mobile jusqu’au déploiement.",
-		lead: "Jalona s’adresse aux personnes qui veulent être très organisées et garder un contrôle précis sur leur planification. Ce n’est pas une énième liste de tâches : l’intérêt est dans la personnalisation, avec des rappels précis, des récurrences avancées et de nombreux réglages. Je conçois et développe tout le produit seul : l’application mobile, le backend, les données et l’infrastructure qui le fait tourner.",
+		summary: "Rappels précis, récurrences avancées, utilisable hors ligne : une app mobile pour les gens très organisés.",
+		lead: "Les apps de tâches courantes offrent peu de contrôle fin. Jalona mise sur la personnalisation : rappels précis, récurrences avancées, nombreux réglages. Je conçois et développe tout seul, de l’app mobile à l’infrastructure.",
 		highlights: [
 			{
 				title: "Pensée hors ligne",
-				text: "Offline-first : l’app reste utilisable sans réseau grâce au stockage local, puis se synchronise avec le serveur dès que la connexion revient.",
+				text: "Utilisable sans réseau, synchronisée dès que la connexion revient.",
 			},
 			{
 				title: "Une vraie architecture",
-				text: "Backend NestJS, PostgreSQL, Redis pour le rate limiting entre les services, le tout réparti dans trois pods Podman.",
+				text: "API NestJS, PostgreSQL et Redis, répartis dans trois pods Podman.",
 			},
 			{
 				title: "Jusqu’au déploiement",
-				text: "Une CI tourne sur mon propre VPS : le projet couvre aussi l’automatisation et le déploiement, pas seulement le code.",
+				text: "Une CI sur mon propre VPS : automatisation et mise en production comprises.",
 			},
 			{
 				title: "Configurable en profondeur",
-				text: "Rappels très précis, récurrences avancées, nombreux paramètres : des règles de planification bien plus riches qu’une simple liste de tâches.",
+				text: "Des règles de planification bien plus riches qu’une liste de tâches.",
 			},
 		],
 		stack: {
@@ -60,6 +59,7 @@ export const projects: Project[] = [
 			"03": ["PostgreSQL", "Redis", "Stockage local · synchronisation"],
 			"02": ["Podman (3 pods)", "CI sur VPS"],
 		},
+		tech: ["React Native", "NestJS", "PostgreSQL", "Redis", "Podman"],
 		diagram: {
 			columns: [
 				{
@@ -79,10 +79,9 @@ export const projects: Project[] = [
 					nodes: [{ title: "Intégration continue", sub: "VPS personnel" }],
 				},
 			],
-			caption:
-				"Architecture simplifiée : l’app fonctionne en local et se synchronise avec des services conteneurisés.",
+			caption: "L’app fonctionne en local et se synchronise avec des services conteneurisés.",
 		},
-		proves: "Que je peux porter un produit entier : penser l’usage, construire l’app mobile, concevoir le backend et les données, puis m’occuper de l’infrastructure et de l’automatisation qui le font tourner.",
+		proves: "Que je peux porter un produit entier, de l’usage jusqu’à l’infrastructure qui le fait tourner.",
 		homeVisual: "phones",
 		media: [
 			{
@@ -114,31 +113,26 @@ export const projects: Project[] = [
 		name: "USTS-HC",
 		context: "Mandat indépendant · client externe",
 		period: "2025",
-		role: "Conception et développement du site public et du back-office",
+		role: "Site public et back-office, en indépendant",
 		status: "En production",
 		url: { href: "https://usts-hc.ch/", label: "usts-hc.ch" },
 		layers: ["05", "04", "03"],
 		coreOffset: -90,
 		title: "Le site d’un club de hockey, et l’outil qui lui permet de tout gérer lui-même.",
-		summary:
-			"Pour un club de hockey, j’ai réalisé en indépendant le site public et, surtout, un back-office complet. Le site est en production.",
-		lead: "Pour une équipe de hockey, j’ai réalisé en tant qu’indépendant le site public et, surtout, l’outil qui se cache derrière : un back-office complet qui permet au club de gérer ses équipes, ses matchs et tout le contenu du site sans passer par un développeur. Le site est en production et le back-office est utilisé par les personnes du club responsables du site.",
+		summary: "Un site public et, surtout, un back-office complet pour un club de hockey. En production.",
+		lead: "Le club voulait gérer lui-même son site, sans dépendre d’un développeur. J’ai réalisé en indépendant le site public et un back-office complet : équipes, matchs, contenu. Il est utilisé en production par les responsables du club.",
 		highlights: [
 			{
 				title: "Un vrai client",
-				text: "Un mandat externe : comprendre le fonctionnement d’un club, traduire ses besoins en fonctionnalités et livrer un produit réellement utilisé.",
+				text: "Un mandat externe : comprendre le fonctionnement d’un club et livrer un outil réellement utilisé.",
 			},
 			{
 				title: "Plus qu’un site vitrine",
-				text: "Joueurs, équipes, matchs, résultats, calendrier, actualités, sponsors, staff, photos : tout se gère depuis le dashboard.",
-			},
-			{
-				title: "Une stack moderne",
-				text: "Nuxt côté site, une API NestJS, Prisma et PostgreSQL pour des données bien structurées.",
+				text: "Joueurs, équipes, matchs, calendrier, actualités, sponsors, staff, photos : tout se gère depuis le dashboard.",
 			},
 			{
 				title: "Pensé pour des non-développeurs",
-				text: "Le back-office est utilisé par les responsables du club : l’outil doit rester simple, même si le modèle de données derrière ne l’est pas.",
+				text: "Un outil simple, malgré un modèle de données riche.",
 			},
 		],
 		stack: {
@@ -146,6 +140,7 @@ export const projects: Project[] = [
 			"04": ["NestJS"],
 			"03": ["Prisma", "PostgreSQL"],
 		},
+		tech: ["Nuxt", "NestJS", "Prisma", "PostgreSQL"],
 		diagram: {
 			columns: [
 				{
@@ -163,9 +158,9 @@ export const projects: Project[] = [
 					nodes: [{ title: "PostgreSQL", sub: "équipes · matchs · contenu" }],
 				},
 			],
-			caption: "Architecture simplifiée : un site public et un back-office qui partagent la même API.",
+			caption: "Le site public et le back-office partagent la même API.",
 		},
-		proves: "Que je sais travailler pour un client : comprendre un besoin métier, le transformer en outil simple pour des non-développeurs, et livrer quelque chose qui tourne en production.",
+		proves: "Que je sais transformer un besoin client en outil simple, et le livrer en production.",
 		homeVisual: "screen",
 		media: [
 			{
@@ -191,6 +186,8 @@ export const projects: Project[] = [
 			},
 			{
 				...MOBILE,
+				// La capture fournie n’est pas un écran entier : cadre au ratio réel du fichier
+				ratio: "5 / 7",
 				file: "projets/usts-hc/mobile",
 				alt: "Site USTS-HC sur téléphone",
 				caption: "Site sur mobile",
@@ -204,26 +201,25 @@ export const projects: Project[] = [
 		name: "Plateforme collaborative de gestion — PLTE",
 		context: "Stage à la PL-MTI · Projet pour la PLTE (EPFL)",
 		period: "2023–2024",
-		role: "Conception et développement : interface VBA, API Laravel, base MySQL",
+		role: "Interface VBA, API Laravel, base MySQL",
 		status: "Utilisé par ≈ 5 personnes",
 		layers: ["05", "04", "03"],
 		coreOffset: 0,
 		title: "Un outil de gestion collaboratif, construit dans une stack imposée : VBA.",
-		summary:
-			"L’interface devait vivre dans un environnement VBA. J’ai construit autour un vrai système : API Laravel, base MySQL et travail à plusieurs sur les mêmes données.",
-		lead: "Pendant mon stage à la PL-MTI, j’ai développé un système complet de gestion de projet pour la PLTE, une plateforme de l’EPFL cliente de la PL-MTI, en parallèle d’autres projets. La contrainte : l’interface devait fonctionner dans un environnement VBA. Plutôt que de contourner cette contrainte, j’ai construit autour d’elle une vraie architecture, avec une API Laravel que j’ai développée, une base MySQL hébergée sur les serveurs de l’EPFL et une gestion de la collaboration entre utilisateurs.",
+		summary: "Interface VBA imposée, API Laravel et base MySQL : un outil métier multi-utilisateur pour une plateforme de l’EPFL.",
+		lead: "Pendant mon stage à la PL-MTI, j’ai développé, en parallèle d’autres projets, un outil de gestion de projet pour la PLTE, une plateforme de l’EPFL cliente de la PL-MTI. Contrainte : l’interface devait rester en VBA. J’ai construit autour une vraie architecture : API Laravel, base MySQL hébergée à l’EPFL, travail à plusieurs sur les mêmes données.",
 		highlights: [
 			{
 				title: "Une contrainte assumée",
-				text: "L’interface en VBA était imposée. J’ai adapté l’architecture à l’environnement existant plutôt que d’imposer mes outils habituels.",
+				text: "VBA imposé : j’ai adapté l’architecture à l’existant plutôt que l’inverse.",
 			},
 			{
 				title: "Travailler à plusieurs",
-				text: "Plusieurs personnes modifient les mêmes données en parallèle : les modifications concurrentes sont détectées et les conflits gérés.",
+				text: "Plusieurs personnes sur les mêmes données : modifications concurrentes détectées, conflits gérés.",
 			},
 			{
 				title: "Un vrai outil métier",
-				text: "Projets, heures, personnes, mesures et planning : tout passe par une API que j’ai conçue et développée.",
+				text: "Projets, heures, personnes, mesures et planning, via une API que j’ai conçue.",
 			},
 		],
 		stack: {
@@ -231,6 +227,7 @@ export const projects: Project[] = [
 			"04": ["Laravel", "API", "Détection des conflits"],
 			"03": ["MySQL", "Serveurs de l’EPFL"],
 		},
+		tech: ["VBA", "Laravel", "MySQL"],
 		diagram: {
 			columns: [
 				{
@@ -245,10 +242,9 @@ export const projects: Project[] = [
 					nodes: [{ title: "MySQL", sub: "hébergé à l’EPFL" }],
 				},
 			],
-			caption:
-				"Architecture simplifiée : chaque poste VBA passe par l’API, qui détecte les modifications concurrentes.",
+			caption: "Chaque poste VBA passe par l’API, qui détecte les modifications concurrentes.",
 		},
-		proves: "Que je m’adapte à l’environnement du client : je peux partir d’une contrainte technique ancienne et construire autour une architecture propre, sans tout réécrire avec mes outils habituels.",
+		proves: "Que je m’adapte à l’environnement du client, en construisant une architecture propre autour d’une contrainte ancienne.",
 		homeVisual: "screen",
 		media: [
 			{
@@ -285,25 +281,24 @@ export const projects: Project[] = [
 		layers: ["05", "04", "03", "02"],
 		coreOffset: 45,
 		title: "Une plateforme pour orchestrer des agents de développement dans des environnements isolés.",
-		summary:
-			"Agent-hub gère plusieurs projets et exécute des tâches confiées à des agents de développement, chacune dans un environnement conteneurisé et isolé.",
-		lead: "Agent-hub centralise plusieurs projets et exécute des tâches confiées à des agents de développement, chacune dans un environnement conteneurisé, isolé et contrôlé. L’intérêt du projet n’est pas l’IA en elle-même, mais tout ce qui l’encadre : l’orchestration, l’isolation entre projets, la sécurité et l’interface qui permet de piloter le tout.",
+		summary: "Des tâches confiées à des agents de développement, chacune exécutée dans un conteneur isolé.",
+		lead: "Agent-hub centralise plusieurs projets et confie des tâches à des agents de développement, chacune exécutée dans un conteneur isolé. L’intérêt n’est pas l’IA, mais ce qui l’encadre : orchestration, isolation, sécurité et pilotage.",
 		highlights: [
 			{
 				title: "Orchestration",
-				text: "Une couche d’orchestration choisit l’environnement et les outils nécessaires, lance l’exécution puis récupère le résultat.",
+				text: "Choix de l’environnement et des outils, exécution, récupération du résultat.",
 			},
 			{
 				title: "Isolation par conception",
-				text: "Chaque tâche s’exécute dans un environnement conteneurisé, séparé des autres projets, avec une exécution contrôlée.",
+				text: "Chaque tâche tourne dans son conteneur, séparée des autres projets.",
 			},
 			{
 				title: "Agents interchangeables",
-				text: "Différents agents ou moteurs d’exécution se branchent derrière une abstraction commune : l’architecture ne dépend pas d’un modèle.",
+				text: "Une abstraction commune : l’architecture ne dépend d’aucun modèle.",
 			},
 			{
 				title: "Deux façons de piloter",
-				text: "Une interface web avec une vue de type bureau et une vue Kanban pour suivre les tâches de chaque projet.",
+				text: "Une vue bureau et une vue Kanban pour suivre chaque projet.",
 			},
 		],
 		stack: {
@@ -312,6 +307,7 @@ export const projects: Project[] = [
 			"03": ["Gestion multi-projets"],
 			"02": ["Docker", "Conteneurs isolés", "Exécution contrôlée"],
 		},
+		tech: ["React", "Node.js", "Docker"],
 		diagram: {
 			columns: [
 				{
@@ -333,10 +329,9 @@ export const projects: Project[] = [
 					],
 				},
 			],
-			caption:
-				"Principe général : chaque tâche passe par l’orchestrateur et s’exécute dans un environnement séparé.",
+			caption: "Chaque tâche passe par l’orchestrateur et s’exécute dans un environnement séparé.",
 		},
-		proves: "Que je sais concevoir un système, pas seulement une application : orchestration, conteneurs, isolation et sécurité, avec une interface pour piloter le tout.",
+		proves: "Que je sais concevoir un système, pas seulement une application.",
 		homeVisual: "diagram",
 		media: [
 			{
@@ -361,13 +356,12 @@ export const projects: Project[] = [
 		name: "CISBAT 2025",
 		context: "Projet de dernière année d’ES · mandant externe · EPFL",
 		period: "3–5 septembre 2025",
-		role: "Responsable de la partie informatique, sous la responsabilité de mon chef",
+		role: "Responsable informatique, sous la responsabilité de mon chef",
 		layers: ["02", "01"],
 		coreOffset: 90,
 		title: "Faire fonctionner l’informatique d’une conférence de trois jours, en direct.",
-		summary:
-			"J’ai coordonné la partie informatique de la conférence : machines, réseau, régies, diffusion en ligne et support, avec une équipe d’environ dix personnes.",
-		lead: "CISBAT 2025 est une conférence qui s’est tenue à l’EPFL du 3 au 5 septembre 2025. Dans le cadre de ma dernière année d’ES, pour un mandant externe, j’étais responsable de la partie informatique : préparation des machines et du réseau, organisation des régies, diffusion en ligne et support pendant l’événement. Je coordonnais une équipe d’environ dix personnes, sous la responsabilité de mon chef.",
+		summary: "Machines, réseau, régies, diffusion en ligne et support d’une conférence hybride à l’EPFL.",
+		lead: "Une conférence de trois jours à l’EPFL, sur place et en ligne. Pour ce projet de dernière année d’ES (mandant externe), j’étais responsable de l’informatique : machines, réseau, régies, diffusion et support, avec une équipe d’environ dix personnes.",
 		facts: [
 			{ value: "≈ 450", label: "participants sur place" },
 			{ value: "≈ 50", label: "participants en ligne" },
@@ -378,30 +372,30 @@ export const projects: Project[] = [
 		highlights: [
 			{
 				title: "Préparer en amont",
-				text: "Configuration des machines, réseau (switches, câblage), micros, caméras et matériel des régies, avant le premier jour.",
+				text: "Machines, réseau, micros, caméras et régies prêts avant le premier jour.",
 			},
 			{
 				title: "Une conférence hybride",
-				text: "Participants sur place et en ligne : live sur Zoom, replays sur Vimeo, avec ConfTool et Swapcard côté organisation.",
+				text: "Live sur Zoom, replays sur Vimeo, ConfTool et Swapcard côté organisation.",
 			},
 			{
 				title: "Coordonner une équipe",
-				text: "Répartir une dizaine de personnes entre régies, micros et support, puis gérer les problèmes au moment où ils apparaissent.",
+				text: "Une dizaine de personnes entre régies, micros et support.",
 			},
 		],
 		story: {
 			kicker: "Sur le terrain",
-			title: "Un exemple : un Wi-Fi visible, mais sans Internet",
+			title: "Un Wi-Fi visible, mais sans Internet",
 			paragraphs: [
-				"Personne ne m’avait signalé en amont qu’un accès Wi-Fi spécifique devait être mis à disposition pendant la conférence. La personne responsable du réseau avait bien fait des tests, mais à un autre endroit du campus.",
-				"Le jour de la conférence, nous étions connectés à un autre point d’accès : le réseau apparaissait, les appareils s’y connectaient, mais sans accès à Internet. Il a fallu écarter rapidement la piste des appareils et de leur configuration, identifier que le problème venait de l’infrastructure propre au lieu, puis coordonner la résolution avec les personnes responsables.",
-				"Rien de spectaculaire, mais c’est typiquement ce qu’un événement réel demande : diagnostiquer vite, parler aux bonnes personnes et garder le reste opérationnel.",
+				"Le jour J, le Wi-Fi demandé pour la conférence se connectait, mais sans Internet. Ce besoin ne m’avait pas été signalé en amont, et les tests avaient été faits ailleurs sur le campus.",
+				"Écarter la piste des appareils, identifier un problème propre à l’infrastructure du lieu, coordonner la résolution avec les responsables, sans arrêter le reste : c’est ce qu’un événement réel demande.",
 			],
 		},
 		stack: {
 			"02": ["≈ 15 postes configurés", "Switches · câblage réseau", "Zoom (live)", "Vimeo (replays)"],
 			"01": ["Régies", "Micros · caméras", "ConfTool · Swapcard", "Coordination d’équipe"],
 		},
+		tech: ["Réseau", "Régies", "Zoom", "Vimeo"],
 		diagram: {
 			columns: [
 				{
@@ -422,9 +416,9 @@ export const projects: Project[] = [
 					],
 				},
 			],
-			caption: "Vue simplifiée du dispositif, des salles jusqu’à la diffusion en ligne.",
+			caption: "Des salles jusqu’à la diffusion en ligne.",
 		},
-		proves: "Que je ne travaille pas seulement derrière un écran : je peux préparer une infrastructure, coordonner une équipe et résoudre des problèmes au moment où ils arrivent.",
+		proves: "Que je sais préparer une infrastructure, coordonner une équipe et résoudre des problèmes en direct.",
 		homeVisual: "photo",
 		media: [
 			{
@@ -445,6 +439,8 @@ export const projects: Project[] = [
 			{
 				...PHOTO,
 				file: "projets/cisbat-2025/preparation",
+				// Photo verticale dans un cadre 3:2 : on garde le poste de travail, au centre bas de l’image
+				position: "50% 62%",
 				alt: "Préparation du matériel informatique avant CISBAT 2025",
 				caption: "Préparation",
 				brief: "La préparation en amont : installation des postes, câblage, matériel réseau.",
@@ -474,8 +470,8 @@ export const experiments: Experiment[] = [
 	{
 		slug: "dice",
 		name: "Dice",
-		text: "Un dé en 3D qu’on lance d’un geste : plus le swipe est fort, plus le dé roule, et le résultat reste aléatoire.",
-		tech: "3D en CSS uniquement · JavaScript vanilla",
+		text: "Un dé 3D lancé d’un swipe : plus le geste est fort, plus il roule.",
+		tech: "CSS 3D · JavaScript vanilla",
 		href: "https://github.com/seb3x97/Dice",
 		media: {
 			kind: "video",
@@ -491,8 +487,8 @@ export const experiments: Experiment[] = [
 	{
 		slug: "audio-analyser",
 		name: "AudioAnalyser",
-		text: "Une visualisation musicale : le son est analysé en temps réel et une sphère de points réagit aux basses.",
-		tech: "Web Audio API · Canvas · visualisation qui réagit au son",
+		text: "Une sphère de points qui réagit aux basses, analysées en temps réel.",
+		tech: "Web Audio API · Canvas",
 		href: "https://github.com/seb3x97/AudioAnalyser",
 		media: {
 			kind: "video",

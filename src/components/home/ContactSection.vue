@@ -12,9 +12,8 @@ import ButtonLink from "@/components/ui/ButtonLink.vue";
 		</h2>
 		<div class="contact__grid">
 			<p v-reveal:2 class="t-lead contact__text">
-				Je cherche un poste de 40 à 80 %, idéalement en développement full-stack, avec un peu de
-				flexibilité et de télétravail. Je reste ouvert à des missions informatiques plus larges. Le
-				plus simple pour me joindre&#8239;: LinkedIn.
+				40 à 80&#8239;%, idéalement full-stack, avec un peu de télétravail. Ouvert aussi à des
+				missions informatiques plus larges.
 			</p>
 			<div v-reveal:3 class="contact__actions">
 				<ButtonLink :href="site.links.linkedin" external>
@@ -54,7 +53,7 @@ import ButtonLink from "@/components/ui/ButtonLink.vue";
 }
 
 .contact__text {
-	max-width: 38em;
+	max-width: 30em;
 }
 
 .contact__actions {

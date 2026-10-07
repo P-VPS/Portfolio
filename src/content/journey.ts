@@ -6,7 +6,7 @@ export const journey: JourneyEntry[] = [
 		period: "2026 → aujourd’hui",
 		kind: "Projets",
 		title: "Jalona et Agent-hub",
-		text: "Deux projets menés seul : un produit mobile complet et une plateforme d’orchestration conteneurisée.",
+		text: "Un produit mobile et une plateforme d’orchestration, menés seul.",
 		current: true,
 	},
 	{
@@ -21,7 +21,7 @@ export const journey: JourneyEntry[] = [
 		kind: "Expérience",
 		title: "Développeur indépendant",
 		place: "USTS-HC · mandat externe",
-		text: "Site public et back-office d’un club de hockey, en production.",
+		text: "Site et back-office d’un club de hockey, en production.",
 		project: "usts-hc",
 	},
 	{
@@ -29,7 +29,7 @@ export const journey: JourneyEntry[] = [
 		kind: "Expérience",
 		title: "Responsable informatique, CISBAT 2025",
 		place: "EPFL · projet de dernière année d’ES",
-		text: "Machines, réseau, régies et diffusion d’une conférence de trois jours, avec une équipe d’environ dix personnes.",
+		text: "Conférence hybride de trois jours, équipe d’environ dix personnes.",
 		project: "cisbat-2025",
 	},
 	{
@@ -43,7 +43,7 @@ export const journey: JourneyEntry[] = [
 		kind: "Expérience",
 		title: "Stage à la PL-MTI",
 		place: "Projet pour la PLTE (EPFL)",
-		text: "Système de gestion de projet pour la PLTE, client de la PL-MTI : interface VBA, API Laravel, base MySQL.",
+		text: "Outil de gestion de projet : VBA, Laravel, MySQL.",
 		project: "plte",
 	},
 	{

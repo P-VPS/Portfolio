@@ -9,7 +9,7 @@
 		transform var(--dur) var(--ease);
 	transition-delay: calc(var(--reveal-i, 0) * 70ms);
 
-	&.is-revealed {
+	&[data-revealed] {
 		opacity: 1;
 		transform: none;
 	}
@@ -23,7 +23,7 @@
 		opacity var(--dur) var(--ease),
 		clip-path var(--dur-slow) var(--ease);
 
-	&.is-revealed {
+	&[data-revealed] {
 		clip-path: inset(0 0 0 0 round 0);
 	}
 }

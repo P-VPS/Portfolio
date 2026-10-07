@@ -1,7 +1,9 @@
 import type { Directive } from "vue";
 
-// v-reveal : apparition douce à l'entrée dans le viewport.
+// v-reveal : apparition douce à l'entrée dans le viewport, jouée une seule fois.
 // v-reveal="'figure'" pour les médias, v-reveal:2 pour décaler (index de stagger).
+// L'état est porté par un attribut data-revealed et non par une classe : Vue réécrit
+// l'attribut class des éléments ayant un :class dynamique, ce qui effaçait la révélation.
 let observer: IntersectionObserver | null = null;
 
 function getObserver(): IntersectionObserver {
@@ -10,7 +12,7 @@ function getObserver(): IntersectionObserver {
 			(entries) => {
 				for (const entry of entries) {
 					if (entry.isIntersecting) {
-						entry.target.classList.add("is-revealed");
+						(entry.target as HTMLElement).dataset.revealed = "";
 						observer?.unobserve(entry.target);
 					}
 				}

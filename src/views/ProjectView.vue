@@ -241,7 +241,7 @@ onMounted(() => (document.title = `${project.value.name} — Sébastien Voide`))
 }
 
 .case__lead {
-	max-width: 40em;
+	max-width: 34em;
 }
 
 .case__meta {
@@ -371,7 +371,7 @@ onMounted(() => (document.title = `${project.value.name} — Sébastien Voide`))
 
 	&__text {
 		color: var(--graphite);
-		max-width: 48ch;
+		max-width: 40ch;
 	}
 }
 
@@ -400,7 +400,7 @@ onMounted(() => (document.title = `${project.value.name} — Sébastien Voide`))
 
 	&__para {
 		color: var(--graphite);
-		max-width: 56ch;
+		max-width: 46ch;
 
 		&:last-child {
 			color: var(--ink);
@@ -418,7 +418,7 @@ onMounted(() => (document.title = `${project.value.name} — Sébastien Voide`))
 
 	&--mobile {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		max-width: 560px;
+		max-width: 720px;
 		margin-bottom: var(--space-7);
 
 		@include up(md) {
