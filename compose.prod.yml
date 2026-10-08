@@ -1,0 +1,19 @@
+# Production overrides for the VPS:
+#
+#   docker compose -f compose.yml -f compose.prod.yaml up -d --build
+#
+# Caddy (another stack) ── proxy ──▶ web (as portfolio-web:80)
+#
+# `proxy` is created outside this project (by the Caddy stack, or
+# `docker network create proxy`).
+services:
+  web:
+    networks:
+      proxy:
+        aliases:
+          - portfolio-web
+
+networks:
+  proxy:
+    external: true
+    name: proxy

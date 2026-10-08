@@ -27,8 +27,8 @@ RUN npm install -g serve
 COPY --from=builder /app/dist ./dist
 
 # Exposer le port (modifiable selon ton choix)
-EXPOSE 4000
+EXPOSE 80
 
 # Lancer le serveur sur le port défini
 # -s : renvoie index.html pour les routes de la SPA (/projets/...)
-CMD ["serve", "-s", "dist", "-l", "4000"]
+CMD ["serve", "-s", "dist", "-l", "80"]

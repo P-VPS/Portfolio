@@ -1,0 +1,12 @@
+name: portfolio
+
+services:
+  # Static site served by `serve` on port 80. Caddy on the VPS terminates HTTPS
+  # in front of it (see compose.prod.yaml).
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${CONTROL_CENTER_PORT:-8080}:80"
