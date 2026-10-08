@@ -8,6 +8,8 @@
 # `docker network create proxy`).
 services:
   web:
+    # Caddy reaches it through `proxy`; no host port needed (8080 is taken on the VPS).
+    ports: !reset []
     networks:
       proxy:
         aliases:
